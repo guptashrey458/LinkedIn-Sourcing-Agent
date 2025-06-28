@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.env
+
+# VSCode or JetBrains IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
