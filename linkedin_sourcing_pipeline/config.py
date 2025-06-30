@@ -1,32 +1,27 @@
+"""
+config.py
 
-# linkedin_sourcing_pipeline/config.py
+Centralized configuration loader for the LinkedIn Sourcing Agent.
+Loads environment variables from .env using python-dotenv.
+"""
 
-from pydantic import BaseSettings, Field
-from typing import Optional
+import os
+from dotenv import load_dotenv
 
-class Settings(BaseSettings):
-    # --- Core API Config ---
-    coresignal_api_key: str = Field(..., env="CORESIGNAL_API_KEY")
-    coresignal_base_url: str = Field("https://api.coresignal.com", env="CORESIGNAL_BASE_URL")
-    use_mock_data: bool = Field(False, env="CORESIGNAL_USE_MOCK")
+# Load environment variables from .env file
+load_dotenv()
 
-    # --- Redis / Caching ---
-    redis_url: Optional[str] = Field(None, env="REDIS_URL")
-    enable_cache: bool = Field(False, env="ENABLE_CACHE")
+class Config:
+    """
+    Access configuration values from environment variables.
+    """
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+    GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+    CORESIGNAL_API_KEY = os.getenv("CORESIGNAL_API_KEY")
+    REDIS_URL = os.getenv("REDIS_URL")
+    DATABASE_URL = os.getenv("DATABASE_URL")
+    # Add more as needed
 
-    # --- API Timeouts / Limits ---
-    request_timeout: int = Field(30, env="REQUEST_TIMEOUT")
-    max_retries: int = Field(3, env="MAX_RETRIES")
-    rate_limit_delay: float = Field(1.0, env="RATE_LIMIT_DELAY")
-
-    # --- Feature Toggles ---
-    enable_enrichment: bool = Field(True, env="ENABLE_ENRICHMENT")
-    enable_scoring: bool = Field(True, env="ENABLE_SCORING")
-    enable_messaging: bool = Field(True, env="ENABLE_MESSAGING")
-
-    class Config:
-        env_file = ".env"
-        env_file_encoding = "utf-8"
-
-# Singleton pattern to reuse
-settings = Settings()
+    @staticmethod
+    def get(key: str, default=None):
+        return os.getenv(key, default)
