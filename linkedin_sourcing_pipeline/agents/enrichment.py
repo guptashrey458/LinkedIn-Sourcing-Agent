@@ -431,3 +431,17 @@ class EnrichmentAgent:
         for c in candidates:
             c["github"] = {"repos": 3, "followers": 42}
         return candidates 
+
+# --- Public helper for pipeline ---
+async def enrich_profiles(candidates: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Asynchronous wrapper that enriches candidate profiles.
+
+    This thin helper is used by the main pipeline so that it can simply
+    `await enrich_profiles(candidates)` regardless of whether the underlying
+    enrichment implementation is synchronous or asynchronous.
+    """
+    # The current `EnrichmentAgent.run` implementation is synchronous, so run
+    # it in a thread-pool executor to avoid blocking the event loop.
+    loop = asyncio.get_event_loop()
+    agent = EnrichmentAgent()
+    return await loop.run_in_executor(None, agent.run, candidates) 

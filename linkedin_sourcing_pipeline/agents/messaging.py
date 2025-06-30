@@ -370,3 +370,9 @@ Best regards,
         # TODO: Integrate with OpenAI or other LLM
         print(f"[MessagingAgent] Generating message for {candidate.get('name')}")
         return f"Hi {candidate.get('name')}, I was impressed by your experience with {', '.join(candidate.get('skills', []))}. We have a {job.get('title')} opening that matches your background!" 
+
+# --- Public helper for pipeline ---
+def generate_outreach_message(candidate: Dict[str, Any], job: Dict[str, Any]) -> str:
+    """Generate outreach message for a candidate given a job description."""
+    agent = MessagingAgent()
+    return agent.run(candidate, job) 

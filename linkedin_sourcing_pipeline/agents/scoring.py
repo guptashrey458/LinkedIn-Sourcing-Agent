@@ -451,3 +451,48 @@ class ScoringAgent:
             c["score"] = 8.5 if "FastAPI" in c.get("skills", []) else 7.0
             c["breakdown"] = {"skills": "Good match" if "FastAPI" in c.get("skills", []) else "Partial match"}
         return candidates 
+
+# --- Public helper for pipeline ---
+def score_profiles(candidate: Dict[str, Any], job: Dict[str, Any]) -> Tuple[float, Dict[str, Any], float]:
+    """Compute fit score, breakdown, and confidence for a single candidate.
+
+    Parameters
+    ----------
+    candidate : Dict[str, Any]
+        Candidate profile dictionary.
+    job : Dict[str, Any]
+        Job requirement dictionary.
+
+    Returns
+    -------
+    Tuple[float, Dict[str, Any], float]
+        (final_score, detailed_breakdown, confidence_level)
+    """
+    scorer = ScoringAgent()
+
+    # Gather individual criterion scores
+    scores = {
+        "skills_match": scorer._evaluate_skills_match(
+            candidate.get("skills", []),
+            job.get("skills", []),
+        ),
+        "experience_relevance": scorer._assess_experience_relevance(
+            candidate.get("companies", []),
+            job.get("title", ""),
+            job.get("required_years", 0),
+        ),
+        "education": scorer._evaluate_education(candidate.get("education", [])),
+        "company_prestige": scorer._assess_company_prestige(candidate.get("companies", [])),
+        "location_fit": scorer._evaluate_location_fit(
+            candidate.get("location", ""),
+            job.get("location", ""),
+            job.get("remote", False),
+        ),
+        "profile_completeness": scorer._calculate_profile_completeness(candidate),
+    }
+
+    # Final weighted score & breakdown
+    final_score, detailed_breakdown = scorer._calculate_final_score(scores)
+    confidence = scorer._determine_confidence_level(candidate)
+
+    return final_score, detailed_breakdown, confidence 
