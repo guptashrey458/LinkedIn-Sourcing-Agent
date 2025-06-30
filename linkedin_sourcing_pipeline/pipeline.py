@@ -1,203 +1,213 @@
-# linkedin_sourcing_pipeline/pipeline.py
-import asyncio
+"""
+Enhanced pipeline.py with proper error handling, logging, and validation
+"""
+from fastapi import FastAPI
+from pydantic import BaseModel
 import logging
-from typing import Dict, List, Any, Optional
-from datetime import datetime
+from typing import Dict, List, Optional
+from pprint import pprint
 
-from .agents.search import search_candidates
-from .agents.enrichment import enrich_profiles
-from .agents.scoring import score_profiles
-from .agents.messaging import generate_outreach_message
+from linkedin_sourcing_pipeline.agents import (
+    DiscoveryAgent, 
+    EnrichmentAgent, 
+    ScoringAgent, 
+    MessagingAgent
+)
 
 # Configure logging
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('pipeline.log'),
+        logging.StreamHandler()
+    ]
+)
 logger = logging.getLogger(__name__)
 
-async def run_job_pipeline(job: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Main pipeline for LinkedIn candidate sourcing
+class PipelineError(Exception):
+    """Custom exception for pipeline errors"""
+    pass
+
+class LinkedInSourcingPipeline:
+    """Main pipeline orchestrator with error handling and validation"""
     
-    Args:
-        job: Dictionary containing job requirements with keys:
-             - job_id: Unique job identifier
-             - title: Job title
-             - location: Job location
-             - skills: List of required skills
-             - remote: Boolean indicating if remote work is allowed
-             - company: Company name
-             - description: Job description (optional)
+    def __init__(self):
+        self.discovery_agent = DiscoveryAgent()
+        self.enrichment_agent = EnrichmentAgent()
+        self.scoring_agent = ScoringAgent()
+        self.messaging_agent = MessagingAgent()
+        
+    def validate_job_description(self, job: Dict) -> None:
+        """Validate job description has required fields"""
+        required_fields = ['title', 'company', 'description', 'requirements']
+        missing_fields = [field for field in required_fields if not job.get(field)]
+        
+        if missing_fields:
+            raise PipelineError(f"Missing required job fields: {missing_fields}")
+            
+    def validate_candidates(self, candidates: List[Dict]) -> None:
+        """Validate candidates have required fields"""
+        if not candidates:
+            raise PipelineError("No candidates found")
+            
+        required_fields = ['name', 'linkedin_url']
+        for i, candidate in enumerate(candidates):
+            missing_fields = [field for field in required_fields if not candidate.get(field)]
+            if missing_fields:
+                logger.warning(f"Candidate {i} missing fields: {missing_fields}")
     
-    Returns:
-        Dictionary containing pipeline results with:
-             - job_id: Job identifier
-             - top_candidates: List of scored and ranked candidates
-             - pipeline_metadata: Execution metadata
-    """
-    
-    start_time = datetime.now()
-    pipeline_metadata = {
-        "start_time": start_time.isoformat(),
-        "steps_completed": [],
-        "errors": [],
-        "candidate_counts": {}
+    def run(self, job_description: Dict) -> Dict:
+        """
+        Run the complete sourcing pipeline with error handling
+        
+        Args:
+            job_description: Dict containing job requirements
+            
+        Returns:
+            Dict with pipeline results and metadata
+        """
+        pipeline_results = {
+            'job': job_description,
+            'candidates': [],
+            'top_candidate': None,
+            'message': None,
+            'errors': [],
+            'warnings': []
+        }
+        
+        try:
+            # Validate input
+            logger.info("Starting LinkedIn sourcing pipeline")
+            self.validate_job_description(job_description)
+            
+            # Step 1: Discovery
+            logger.info("Step 1: Running candidate discovery")
+            try:
+                candidates = self.discovery_agent.run(job_description)
+                self.validate_candidates(candidates)
+                pipeline_results['candidates'] = candidates
+                logger.info(f"Found {len(candidates)} candidates")
+            except Exception as e:
+                error_msg = f"Discovery failed: {str(e)}"
+                logger.error(error_msg)
+                pipeline_results['errors'].append(error_msg)
+                return pipeline_results
+            
+            # Step 2: Enrichment
+            logger.info("Step 2: Running candidate enrichment")
+            try:
+                enriched_candidates = self.enrichment_agent.run(candidates)
+                pipeline_results['candidates'] = enriched_candidates
+                logger.info(f"Enriched {len(enriched_candidates)} candidates")
+            except Exception as e:
+                error_msg = f"Enrichment failed: {str(e)}"
+                logger.error(error_msg)
+                pipeline_results['errors'].append(error_msg)
+                # Continue with original candidates
+                enriched_candidates = candidates
+            
+            # Step 3: Scoring
+            logger.info("Step 3: Running candidate scoring")
+            try:
+                scored_candidates = self.scoring_agent.run(enriched_candidates, job_description)
+                pipeline_results['candidates'] = scored_candidates
+                logger.info(f"Scored {len(scored_candidates)} candidates")
+            except Exception as e:
+                error_msg = f"Scoring failed: {str(e)}"
+                logger.error(error_msg)
+                pipeline_results['errors'].append(error_msg)
+                return pipeline_results
+            
+            # Step 4: Select top candidate
+            logger.info("Step 4: Selecting top candidate")
+            try:
+                if scored_candidates:
+                    top_candidate = max(scored_candidates, key=lambda x: x.get('score', 0))
+                    pipeline_results['top_candidate'] = top_candidate
+                    logger.info(f"Top candidate: {top_candidate.get('name')} (score: {top_candidate.get('score')})")
+                else:
+                    raise PipelineError("No candidates available for selection")
+            except Exception as e:
+                error_msg = f"Candidate selection failed: {str(e)}"
+                logger.error(error_msg)
+                pipeline_results['errors'].append(error_msg)
+                return pipeline_results
+            
+            # Step 5: Generate message
+            logger.info("Step 5: Generating personalized message")
+            try:
+                message = self.messaging_agent.run(top_candidate, job_description)
+                pipeline_results['message'] = message
+                logger.info("Message generated successfully")
+            except Exception as e:
+                error_msg = f"Message generation failed: {str(e)}"
+                logger.error(error_msg)
+                pipeline_results['errors'].append(error_msg)
+            
+            logger.info("Pipeline completed successfully")
+            return pipeline_results
+            
+        except Exception as e:
+            error_msg = f"Pipeline failed: {str(e)}"
+            logger.error(error_msg)
+            pipeline_results['errors'].append(error_msg)
+            return pipeline_results
+
+def main():
+    """Demo the enhanced pipeline"""
+    # Mock job description with all required fields
+    job_description = {
+        "title": "Senior Python Developer",
+        "company": "Tech Innovations Inc.",
+        "description": "We are looking for a Senior Python Developer to join our team...",
+        "requirements": [
+            "5+ years Python experience",
+            "Experience with Django/Flask",
+            "Strong problem-solving skills",
+            "Team collaboration experience"
+        ],
+        "location": "San Francisco, CA",
+        "salary_range": "$120k - $180k"
     }
     
-    try:
-        logger.info(f"Starting pipeline for job: {job.get('job_id', 'unknown')}")
-        
-        # 1. Step: Search Candidates using Coresignal mock data
-        logger.info("Step 1: Searching candidates...")
-        try:
-            candidates = await search_candidates(job)
-            pipeline_metadata["candidate_counts"]["initial_search"] = len(candidates)
-            pipeline_metadata["steps_completed"].append("search")
-            logger.info(f"Found {len(candidates)} candidates in initial search")
-        except Exception as e:
-            logger.error(f"Error in search step: {str(e)}")
-            pipeline_metadata["errors"].append(f"Search error: {str(e)}")
-            candidates = []
-
-        # 2. Step: Enrich Profiles (GitHub, blogs, etc.)
-        logger.info("Step 2: Enriching candidate profiles...")
-        try:
-            
-            enriched_candidates = await enrich_profiles(candidates)
-            pipeline_metadata["candidate_counts"]["after_enrichment"] = len(enriched_candidates)
-            pipeline_metadata["steps_completed"].append("enrichment")
-            logger.info(f"Enriched {len(enriched_candidates)} candidate profiles")
-        except Exception as e:
-            logger.error(f"Error in enrichment step: {str(e)}")
-            pipeline_metadata["errors"].append(f"Enrichment error: {str(e)}")
-            enriched_candidates = candidates  # Fallback to original candidates
-
-        # 3. Step: Score Candidates
-        logger.info("Step 3: Scoring candidates...")
-        scored_candidates = []
-        try:
-            for candidate in enriched_candidates:
-                try:
-                    score, breakdown, confidence = score_profiles(candidate, job)
-                    candidate.update({
-                        "fit_score": score,
-                        "score_breakdown": breakdown,
-                        "confidence": confidence,
-                        "scored_at": datetime.now().isoformat()
-                    })
-                    scored_candidates.append(candidate)
-                except Exception as e:
-                    logger.warning(f"Error scoring candidate {candidate.get('name', 'unknown')}: {str(e)}")
-                    # Add default scores for failed candidates
-                    candidate.update({
-                        "fit_score": 5.0,
-                        "score_breakdown": {"error": "Scoring failed"},
-                        "confidence": 0.5,
-                        "scored_at": datetime.now().isoformat()
-                    })
-                    scored_candidates.append(candidate)
-            
-            pipeline_metadata["candidate_counts"]["after_scoring"] = len(scored_candidates)
-            pipeline_metadata["steps_completed"].append("scoring")
-            logger.info(f"Scored {len(scored_candidates)} candidates")
-        except Exception as e:
-            logger.error(f"Error in scoring step: {str(e)}")
-            pipeline_metadata["errors"].append(f"Scoring error: {str(e)}")
-
-        # 4. Step: Generate Outreach Messages for top N
-        logger.info("Step 4: Generating outreach messages...")
-        try:
-            # Sort by fit score and get top candidates
-            top_candidates = sorted(scored_candidates, key=lambda c: c.get("fit_score", 0), reverse=True)[:10]
-            
-            for candidate in top_candidates:
-                try:
-                    candidate["outreach_message"] = generate_outreach_message(candidate, job)
-                    candidate["message_generated_at"] = datetime.now().isoformat()
-                except Exception as e:
-                    logger.warning(f"Error generating message for {candidate.get('name', 'unknown')}: {str(e)}")
-                    candidate["outreach_message"] = f"Hi {candidate.get('name', 'there')}, I'd like to connect regarding a {job.get('title', 'opportunity')} at {job.get('company', 'our company')}."
-                    candidate["message_generated_at"] = datetime.now().isoformat()
-            
-            pipeline_metadata["candidate_counts"]["final_top_candidates"] = len(top_candidates)
-            pipeline_metadata["steps_completed"].append("messaging")
-            logger.info(f"Generated outreach messages for {len(top_candidates)} top candidates")
-        except Exception as e:
-            logger.error(f"Error in messaging step: {str(e)}")
-            pipeline_metadata["errors"].append(f"Messaging error: {str(e)}")
-            top_candidates = scored_candidates[:10]  # Fallback to top 10 scored candidates
-
-        # Calculate pipeline statistics
-        end_time = datetime.now()
-        pipeline_metadata.update({
-            "end_time": end_time.isoformat(),
-            "execution_time_seconds": (end_time - start_time).total_seconds(),
-            "success_rate": len(pipeline_metadata["steps_completed"]) / 4,  # 4 total steps
-            "avg_fit_score": sum(c.get("fit_score", 0) for c in top_candidates) / len(top_candidates) if top_candidates else 0
-        })
-
-        logger.info(f"Pipeline completed successfully. Found {len(top_candidates)} top candidates with average fit score of {pipeline_metadata['avg_fit_score']:.2f}")
-
-        return {
-            "job_id": job.get("job_id"),
-            "job_title": job.get("title"),
-            "company": job.get("company"),
-            "top_candidates": top_candidates,
-            "pipeline_metadata": pipeline_metadata,
-            "total_candidates_processed": len(candidates),
-            "success": len(pipeline_metadata["errors"]) == 0
-        }
-
-    except Exception as e:
-        logger.error(f"Critical pipeline error: {str(e)}")
-        pipeline_metadata["errors"].append(f"Critical error: {str(e)}")
-        pipeline_metadata["end_time"] = datetime.now().isoformat()
-        
-        return {
-            "job_id": job.get("job_id"),
-            "top_candidates": [],
-            "pipeline_metadata": pipeline_metadata,
-            "total_candidates_processed": 0,
-            "success": False,
-            "error": str(e)
-        }
-
-async def run_batch_pipeline(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    """
-    Run pipeline for multiple jobs concurrently
+    # Run pipeline
+    pipeline = LinkedInSourcingPipeline()
+    results = pipeline.run(job_description)
     
-    Args:
-        jobs: List of job dictionaries
+    # Display results
+    print("\n" + "="*50)
+    print("PIPELINE RESULTS")
+    print("="*50)
     
-    Returns:
-        List of pipeline results for each job
-    """
-    logger.info(f"Starting batch pipeline for {len(jobs)} jobs")
+    if results['errors']:
+        print(f"\n❌ ERRORS ({len(results['errors'])}):")
+        for error in results['errors']:
+            print(f"  • {error}")
     
-    # Run pipelines concurrently with semaphore to limit concurrent executions
-    semaphore = asyncio.Semaphore(5)  # Limit to 5 concurrent pipelines
+    if results['warnings']:
+        print(f"\n⚠️  WARNINGS ({len(results['warnings'])}):")
+        for warning in results['warnings']:
+            print(f"  • {warning}")
     
-    async def run_single_pipeline(job):
-        async with semaphore:
-            return await run_job_pipeline(job)
+    print(f"\n📊 CANDIDATES FOUND: {len(results['candidates'])}")
+    if results['candidates']:
+        print("Candidates:")
+        for i, candidate in enumerate(results['candidates'], 1):
+            score = candidate.get('score', 'N/A')
+            print(f"  {i}. {candidate['name']} (Score: {score})")
     
-    # Execute all pipelines concurrently
-    tasks = [run_single_pipeline(job) for job in jobs]
-    results = await asyncio.gather(*tasks, return_exceptions=True)
+    if results['top_candidate']:
+        print(f"\n🏆 TOP CANDIDATE:")
+        print(f"  Name: {results['top_candidate']['name']}")
+        print(f"  Score: {results['top_candidate'].get('score', 'N/A')}")
+        print(f"  LinkedIn: {results['top_candidate']['linkedin_url']}")
     
-    # Handle any exceptions that occurred
-    processed_results = []
-    for i, result in enumerate(results):
-        if isinstance(result, Exception):
-            logger.error(f"Pipeline {i} failed with exception: {str(result)}")
-            processed_results.append({
-                "job_id": jobs[i].get("job_id"),
-                "top_candidates": [],
-                "pipeline_metadata": {"errors": [str(result)]},
-                "total_candidates_processed": 0,
-                "success": False,
-                "error": str(result)
-            })
-        else:
-            processed_results.append(result)
+    if results['message']:
+        print(f"\n💬 GENERATED MESSAGE:")
+        print(f"  {results['message']}")
     
-    logger.info(f"Batch pipeline completed. {len([r for r in processed_results if r['success']])}/{len(processed_results)} jobs successful")
-    return processed_results
+    print("\n" + "="*50)
+
+if __name__ == "__main__":
+    main()

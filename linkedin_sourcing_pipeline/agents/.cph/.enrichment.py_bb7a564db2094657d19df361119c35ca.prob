@@ -1,0 +1,1 @@
+{"name":"Local: enrichment","url":"/Users/Illuminati/LinkedIn-Sourcing-Agent-1/linkedin_sourcing_pipeline/agents/enrichment.py","tests":[{"id":1751304953783,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/Illuminati/LinkedIn-Sourcing-Agent-1/linkedin_sourcing_pipeline/agents/enrichment.py","group":"local","local":true}

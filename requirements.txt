@@ -11,7 +11,7 @@ crewai
 langchain
 langchain-openai
 langchain-community
-
+crewai>=0.28.0
 # --- Data Processing ---
 pandas
 numpy

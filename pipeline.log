@@ -1,0 +1,306 @@
+2025-06-30 12:56:52,032 - linkedin_sourcing_pipeline.pipeline - INFO - Starting LinkedIn sourcing pipeline
+2025-06-30 12:56:52,032 - linkedin_sourcing_pipeline.pipeline - INFO - Step 1: Running candidate discovery
+2025-06-30 12:56:52,033 - linkedin_sourcing_pipeline.pipeline - INFO - Found 2 candidates
+2025-06-30 12:56:52,033 - linkedin_sourcing_pipeline.pipeline - INFO - Step 2: Running candidate enrichment
+2025-06-30 12:56:52,033 - linkedin_sourcing_pipeline.pipeline - INFO - Enriched 2 candidates
+2025-06-30 12:56:52,033 - linkedin_sourcing_pipeline.pipeline - INFO - Step 3: Running candidate scoring
+2025-06-30 12:56:52,033 - linkedin_sourcing_pipeline.pipeline - INFO - Scored 2 candidates
+2025-06-30 12:56:52,033 - linkedin_sourcing_pipeline.pipeline - INFO - Step 4: Selecting top candidate
+2025-06-30 12:56:52,033 - linkedin_sourcing_pipeline.pipeline - INFO - Top candidate: Alice Smith (score: 8.5)
+2025-06-30 12:56:52,033 - linkedin_sourcing_pipeline.pipeline - INFO - Step 5: Generating personalized message
+2025-06-30 12:56:52,033 - linkedin_sourcing_pipeline.pipeline - INFO - Message generated successfully
+2025-06-30 12:56:52,033 - linkedin_sourcing_pipeline.pipeline - INFO - Pipeline completed successfully
+2025-06-30 13:05:34,940 - linkedin_sourcing_pipeline.pipeline - INFO - Starting LinkedIn sourcing pipeline
+2025-06-30 13:05:34,940 - linkedin_sourcing_pipeline.pipeline - INFO - Starting LinkedIn sourcing pipeline
+2025-06-30 13:05:34,941 - linkedin_sourcing_pipeline.pipeline - INFO - Starting LinkedIn sourcing pipeline
+2025-06-30 13:05:34,941 - linkedin_sourcing_pipeline.pipeline - INFO - Step 1: Running candidate discovery
+2025-06-30 13:05:34,941 - linkedin_sourcing_pipeline.pipeline - INFO - Step 1: Running candidate discovery
+2025-06-30 13:05:34,941 - linkedin_sourcing_pipeline.pipeline - INFO - Step 1: Running candidate discovery
+2025-06-30 13:05:34,941 - linkedin_sourcing_pipeline.pipeline - INFO - Found 2 candidates
+2025-06-30 13:05:34,942 - linkedin_sourcing_pipeline.pipeline - INFO - Found 2 candidates
+2025-06-30 13:05:34,942 - linkedin_sourcing_pipeline.pipeline - INFO - Found 2 candidates
+2025-06-30 13:05:34,942 - linkedin_sourcing_pipeline.pipeline - INFO - Step 2: Running candidate enrichment
+2025-06-30 13:05:34,942 - linkedin_sourcing_pipeline.pipeline - INFO - Step 2: Running candidate enrichment
+2025-06-30 13:05:34,942 - linkedin_sourcing_pipeline.pipeline - INFO - Step 2: Running candidate enrichment
+2025-06-30 13:05:34,942 - linkedin_sourcing_pipeline.pipeline - INFO - Enriched 2 candidates
+2025-06-30 13:05:34,942 - linkedin_sourcing_pipeline.pipeline - INFO - Enriched 2 candidates
+2025-06-30 13:05:34,942 - linkedin_sourcing_pipeline.pipeline - INFO - Enriched 2 candidates
+2025-06-30 13:05:34,942 - linkedin_sourcing_pipeline.pipeline - INFO - Step 3: Running candidate scoring
+2025-06-30 13:05:34,942 - linkedin_sourcing_pipeline.pipeline - INFO - Step 3: Running candidate scoring
+2025-06-30 13:05:34,943 - linkedin_sourcing_pipeline.pipeline - INFO - Step 3: Running candidate scoring
+2025-06-30 13:05:34,943 - linkedin_sourcing_pipeline.pipeline - INFO - Scored 2 candidates
+2025-06-30 13:05:34,943 - linkedin_sourcing_pipeline.pipeline - INFO - Scored 2 candidates
+2025-06-30 13:05:34,943 - linkedin_sourcing_pipeline.pipeline - INFO - Scored 2 candidates
+2025-06-30 13:05:34,943 - linkedin_sourcing_pipeline.pipeline - INFO - Step 4: Selecting top candidate
+2025-06-30 13:05:34,943 - linkedin_sourcing_pipeline.pipeline - INFO - Step 4: Selecting top candidate
+2025-06-30 13:05:34,943 - linkedin_sourcing_pipeline.pipeline - INFO - Step 4: Selecting top candidate
+2025-06-30 13:05:34,943 - linkedin_sourcing_pipeline.pipeline - INFO - Top candidate: Alice Smith (score: 8.5)
+2025-06-30 13:05:34,943 - linkedin_sourcing_pipeline.pipeline - INFO - Top candidate: Alice Smith (score: 8.5)
+2025-06-30 13:05:34,943 - linkedin_sourcing_pipeline.pipeline - INFO - Top candidate: Alice Smith (score: 8.5)
+2025-06-30 13:05:34,943 - linkedin_sourcing_pipeline.pipeline - INFO - Step 5: Generating personalized message
+2025-06-30 13:05:34,943 - linkedin_sourcing_pipeline.pipeline - INFO - Step 5: Generating personalized message
+2025-06-30 13:05:34,943 - linkedin_sourcing_pipeline.pipeline - INFO - Step 5: Generating personalized message
+2025-06-30 13:05:34,944 - linkedin_sourcing_pipeline.pipeline - INFO - Message generated successfully
+2025-06-30 13:05:34,944 - linkedin_sourcing_pipeline.pipeline - INFO - Message generated successfully
+2025-06-30 13:05:34,944 - linkedin_sourcing_pipeline.pipeline - INFO - Message generated successfully
+2025-06-30 13:05:34,944 - linkedin_sourcing_pipeline.pipeline - INFO - Pipeline completed successfully
+2025-06-30 13:05:34,944 - linkedin_sourcing_pipeline.pipeline - INFO - Pipeline completed successfully
+2025-06-30 13:05:34,944 - linkedin_sourcing_pipeline.pipeline - INFO - Pipeline completed successfully
+2025-06-30 17:51:40,729 - linkedin_sourcing_pipeline.crewai_pipeline - INFO - Starting CrewAI LinkedIn sourcing pipeline
+2025-06-30 17:51:41,110 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-30 17:51:41,376 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-30 17:51:41,397 - linkedin_sourcing_pipeline.crewai_pipeline - INFO - Executing CrewAI crew...
+2025-06-30 17:51:42,244 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:51:42,244 - openai._base_client - INFO - Retrying request to /embeddings in 0.375041 seconds
+2025-06-30 17:51:42,942 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:51:42,942 - openai._base_client - INFO - Retrying request to /embeddings in 0.755494 seconds
+2025-06-30 17:51:44,020 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:51:44,021 - root - ERROR - Error during short_term search: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:51:44,379 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:51:44,380 - openai._base_client - INFO - Retrying request to /embeddings in 0.434739 seconds
+2025-06-30 17:51:46,005 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:51:46,005 - openai._base_client - INFO - Retrying request to /embeddings in 0.989720 seconds
+2025-06-30 17:51:47,346 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:51:47,347 - root - ERROR - Error during entities search: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:51:47,363 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2025-06-30 17:51:58,400 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-30 17:51:58,410 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-06-30 17:51:58,410 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:51:58,411 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:51:58,411 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:51:58,504 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:51:58,504 - openai._base_client - INFO - Retrying request to /embeddings in 0.483788 seconds
+2025-06-30 17:51:59,070 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:51:59,070 - openai._base_client - INFO - Retrying request to /embeddings in 0.987410 seconds
+2025-06-30 17:52:00,854 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:00,855 - root - ERROR - Error during short_term save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:02,013 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2025-06-30 17:52:05,926 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-30 17:52:05,929 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-06-30 17:52:05,930 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:52:05,932 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:52:06,023 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:06,023 - openai._base_client - INFO - Retrying request to /embeddings in 0.492428 seconds
+2025-06-30 17:52:06,799 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:06,799 - openai._base_client - INFO - Retrying request to /embeddings in 0.906528 seconds
+2025-06-30 17:52:08,137 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:08,138 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:08,205 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:08,205 - openai._base_client - INFO - Retrying request to /embeddings in 0.422738 seconds
+2025-06-30 17:52:08,692 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:08,692 - openai._base_client - INFO - Retrying request to /embeddings in 0.997041 seconds
+2025-06-30 17:52:10,308 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:10,309 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:10,382 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:10,382 - openai._base_client - INFO - Retrying request to /embeddings in 0.466583 seconds
+2025-06-30 17:52:10,922 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:10,923 - openai._base_client - INFO - Retrying request to /embeddings in 0.997718 seconds
+2025-06-30 17:52:11,979 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:11,980 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:12,065 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:12,065 - openai._base_client - INFO - Retrying request to /embeddings in 0.420494 seconds
+2025-06-30 17:52:12,558 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:12,558 - openai._base_client - INFO - Retrying request to /embeddings in 0.831507 seconds
+2025-06-30 17:52:13,452 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:13,453 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:13,522 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:13,522 - openai._base_client - INFO - Retrying request to /embeddings in 0.437014 seconds
+2025-06-30 17:52:14,988 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:14,988 - openai._base_client - INFO - Retrying request to /embeddings in 0.994516 seconds
+2025-06-30 17:52:16,042 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:16,042 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:16,143 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:16,143 - openai._base_client - INFO - Retrying request to /embeddings in 0.444109 seconds
+2025-06-30 17:52:16,669 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:16,669 - openai._base_client - INFO - Retrying request to /embeddings in 0.869332 seconds
+2025-06-30 17:52:17,623 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:17,624 - root - ERROR - Error during short_term search: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:17,694 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:17,694 - openai._base_client - INFO - Retrying request to /embeddings in 0.478802 seconds
+2025-06-30 17:52:18,250 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:18,251 - openai._base_client - INFO - Retrying request to /embeddings in 0.983172 seconds
+2025-06-30 17:52:19,293 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:19,293 - root - ERROR - Error during entities search: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:19,299 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2025-06-30 17:52:40,880 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-30 17:52:40,892 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-06-30 17:52:40,894 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:52:40,894 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:52:40,901 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:52:41,025 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:41,025 - openai._base_client - INFO - Retrying request to /embeddings in 0.395347 seconds
+2025-06-30 17:52:41,507 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:41,507 - openai._base_client - INFO - Retrying request to /embeddings in 0.752500 seconds
+2025-06-30 17:52:42,537 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:42,539 - root - ERROR - Error during short_term save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:42,551 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2025-06-30 17:52:47,795 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-30 17:52:47,800 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-06-30 17:52:47,801 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:52:47,801 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:52:47,807 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:52:47,884 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:47,885 - openai._base_client - INFO - Retrying request to /embeddings in 0.489536 seconds
+2025-06-30 17:52:48,463 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:48,464 - openai._base_client - INFO - Retrying request to /embeddings in 0.954761 seconds
+2025-06-30 17:52:49,485 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:49,487 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:49,551 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:49,552 - openai._base_client - INFO - Retrying request to /embeddings in 0.398523 seconds
+2025-06-30 17:52:50,048 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:50,049 - openai._base_client - INFO - Retrying request to /embeddings in 0.809492 seconds
+2025-06-30 17:52:50,924 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:50,925 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:50,984 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:50,984 - openai._base_client - INFO - Retrying request to /embeddings in 0.403757 seconds
+2025-06-30 17:52:51,443 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:51,443 - openai._base_client - INFO - Retrying request to /embeddings in 0.915596 seconds
+2025-06-30 17:52:52,443 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:52,444 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:52,498 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:52,499 - openai._base_client - INFO - Retrying request to /embeddings in 0.410331 seconds
+2025-06-30 17:52:52,978 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:52,979 - openai._base_client - INFO - Retrying request to /embeddings in 0.982399 seconds
+2025-06-30 17:52:54,076 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:54,078 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:54,150 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:54,150 - openai._base_client - INFO - Retrying request to /embeddings in 0.448361 seconds
+2025-06-30 17:52:54,686 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:54,687 - openai._base_client - INFO - Retrying request to /embeddings in 0.807548 seconds
+2025-06-30 17:52:55,582 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:55,583 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:55,685 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:55,686 - openai._base_client - INFO - Retrying request to /embeddings in 0.446817 seconds
+2025-06-30 17:52:56,224 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:56,225 - openai._base_client - INFO - Retrying request to /embeddings in 0.913388 seconds
+2025-06-30 17:52:57,224 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:57,226 - root - ERROR - Error during short_term search: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:57,325 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:57,327 - openai._base_client - INFO - Retrying request to /embeddings in 0.386209 seconds
+2025-06-30 17:52:57,795 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:57,802 - openai._base_client - INFO - Retrying request to /embeddings in 0.930347 seconds
+2025-06-30 17:52:58,823 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:52:58,826 - root - ERROR - Error during entities search: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:52:58,845 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2025-06-30 17:53:16,809 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-30 17:53:16,813 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-06-30 17:53:16,813 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:53:16,814 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:53:16,817 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:53:18,408 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:18,409 - openai._base_client - INFO - Retrying request to /embeddings in 0.457356 seconds
+2025-06-30 17:53:18,957 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:18,958 - openai._base_client - INFO - Retrying request to /embeddings in 0.757235 seconds
+2025-06-30 17:53:19,788 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:19,789 - root - ERROR - Error during short_term save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:53:19,795 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2025-06-30 17:53:24,848 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-30 17:53:24,853 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-06-30 17:53:24,854 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:53:24,854 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:53:24,860 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:53:24,957 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:24,958 - openai._base_client - INFO - Retrying request to /embeddings in 0.485100 seconds
+2025-06-30 17:53:25,547 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:25,548 - openai._base_client - INFO - Retrying request to /embeddings in 0.902579 seconds
+2025-06-30 17:53:26,519 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:26,520 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:53:26,579 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:26,580 - openai._base_client - INFO - Retrying request to /embeddings in 0.415212 seconds
+2025-06-30 17:53:27,075 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:27,075 - openai._base_client - INFO - Retrying request to /embeddings in 0.827189 seconds
+2025-06-30 17:53:27,987 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:27,988 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:53:28,052 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:28,054 - openai._base_client - INFO - Retrying request to /embeddings in 0.385731 seconds
+2025-06-30 17:53:28,541 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:28,543 - openai._base_client - INFO - Retrying request to /embeddings in 0.934673 seconds
+2025-06-30 17:53:29,558 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:29,559 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:53:29,624 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:29,625 - openai._base_client - INFO - Retrying request to /embeddings in 0.412612 seconds
+2025-06-30 17:53:30,104 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:30,105 - openai._base_client - INFO - Retrying request to /embeddings in 0.888268 seconds
+2025-06-30 17:53:31,064 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:31,066 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:53:31,147 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:31,150 - openai._base_client - INFO - Retrying request to /embeddings in 0.474507 seconds
+2025-06-30 17:53:31,706 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:31,707 - openai._base_client - INFO - Retrying request to /embeddings in 0.941758 seconds
+2025-06-30 17:53:32,715 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:32,716 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:53:32,830 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:32,830 - openai._base_client - INFO - Retrying request to /embeddings in 0.474021 seconds
+2025-06-30 17:53:33,393 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:33,394 - openai._base_client - INFO - Retrying request to /embeddings in 0.787429 seconds
+2025-06-30 17:53:34,264 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:34,265 - root - ERROR - Error during short_term search: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:53:34,341 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:34,342 - openai._base_client - INFO - Retrying request to /embeddings in 0.389774 seconds
+2025-06-30 17:53:34,804 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:34,804 - openai._base_client - INFO - Retrying request to /embeddings in 0.947504 seconds
+2025-06-30 17:53:35,829 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:35,830 - root - ERROR - Error during entities search: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:53:35,842 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2025-06-30 17:53:42,432 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-30 17:53:42,436 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-06-30 17:53:42,437 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:53:42,437 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:53:42,443 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:53:42,542 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:42,543 - openai._base_client - INFO - Retrying request to /embeddings in 0.494430 seconds
+2025-06-30 17:53:43,109 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:43,111 - openai._base_client - INFO - Retrying request to /embeddings in 0.772872 seconds
+2025-06-30 17:53:43,964 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:43,965 - root - ERROR - Error during short_term save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:53:43,975 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2025-06-30 17:53:51,395 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-30 17:53:51,399 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-06-30 17:53:51,400 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:53:51,400 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:53:51,404 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+2025-06-30 17:53:51,500 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:51,501 - openai._base_client - INFO - Retrying request to /embeddings in 0.375186 seconds
+2025-06-30 17:53:51,974 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:51,975 - openai._base_client - INFO - Retrying request to /embeddings in 0.942712 seconds
+2025-06-30 17:53:52,993 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:52,994 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:53:53,063 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:53,064 - openai._base_client - INFO - Retrying request to /embeddings in 0.433500 seconds
+2025-06-30 17:53:53,598 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:53,600 - openai._base_client - INFO - Retrying request to /embeddings in 0.926834 seconds
+2025-06-30 17:53:54,617 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:54,618 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:53:54,707 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:54,708 - openai._base_client - INFO - Retrying request to /embeddings in 0.409948 seconds
+2025-06-30 17:53:55,200 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:55,201 - openai._base_client - INFO - Retrying request to /embeddings in 0.858066 seconds
+2025-06-30 17:53:56,137 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:56,139 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:53:56,238 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:56,239 - openai._base_client - INFO - Retrying request to /embeddings in 0.430653 seconds
+2025-06-30 17:53:56,749 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:56,749 - openai._base_client - INFO - Retrying request to /embeddings in 0.802848 seconds
+2025-06-30 17:53:57,618 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:57,618 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:53:57,694 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:57,695 - openai._base_client - INFO - Retrying request to /embeddings in 0.409086 seconds
+2025-06-30 17:53:58,182 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:58,185 - openai._base_client - INFO - Retrying request to /embeddings in 0.886745 seconds
+2025-06-30 17:53:59,173 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:59,174 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:53:59,260 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:59,260 - openai._base_client - INFO - Retrying request to /embeddings in 0.438330 seconds
+2025-06-30 17:53:59,768 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:53:59,769 - openai._base_client - INFO - Retrying request to /embeddings in 0.993440 seconds
+2025-06-30 17:54:00,865 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-06-30 17:54:00,867 - root - ERROR - Error during entities save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+2025-06-30 17:54:00,888 - linkedin_sourcing_pipeline.crewai_pipeline - INFO - CrewAI pipeline completed successfully
