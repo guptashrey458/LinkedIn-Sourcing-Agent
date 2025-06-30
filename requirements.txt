@@ -1,3 +1,44 @@
+# --- Core Dependencies ---
 fastapi
-uvicorn
+uvicorn[standard]
+httpx
 aiohttp
+pydantic
+python-dotenv
+
+# --- CrewAI Framework ---
+crewai
+langchain
+langchain-openai
+langchain-community
+
+# --- Data Processing ---
+pandas
+numpy
+
+# --- Caching ---
+redis
+aioredis
+
+# --- Optional AI/ML Enhancements ---
+openai             # For GPT-based messaging
+transformers       # (Optional) NLP model scoring
+
+# --- GitHub / Twitter API Integration ---
+PyGithub           # GitHub API client
+snscrape           # Twitter scraping (alternative to official API)
+
+# --- Persistent Storage (Optional) ---
+sqlalchemy
+
+# --- Background Tasks (Optional) ---
+celery
+
+# --- Dev/Test/Tooling ---
+black
+flake8
+isort
+mypy
+pytest
+pytest-asyncio
+pytest-cov
