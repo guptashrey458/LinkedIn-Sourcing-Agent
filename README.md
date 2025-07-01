@@ -22,7 +22,7 @@ React UI → API Call → FastAPI Backend → CrewAI Agents → Coresignal API �
 - **Production**: https://linkedin-sourcing-pipeline-7deovywqo.vercel.app
 
 ### Backend API
-- **API Endpoint**: `https://linkedin-sourcing-agent.onrender.com/docs`
+- **API Endpoint**: `https://linkedin-sourcing-agent.onrender.com`
 - **Health Check**: `https://linkedin-sourcing-agent.onrender.com/health`
 
 ## 📁 Project Structure
