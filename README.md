@@ -13,28 +13,28 @@ React UI → API Call → FastAPI Backend → CrewAI Agents → Coresignal API �
 <div align="center">
 
 ### Frontend Technologies
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ### Backend Technologies
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Uvicorn](https://img.shields.io/badge/Uvicorn-059669?style=for-the-badge&logo=uvicorn&logoColor=white)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Uvicorn](https://img.shields.io/badge/Uvicorn-059669?style=for-the-badge&logo=uvicorn&logoColor=white)](https://www.uvicorn.org/)
 
 ### AI & Machine Learning
-![CrewAI](https://img.shields.io/badge/CrewAI-FF6B6B?style=for-the-badge&logo=crewai&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+[![CrewAI](https://img.shields.io/badge/CrewAI-FF6B6B?style=for-the-badge&logo=crewai&logoColor=white)](https://docs.crewai.com/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)](https://platform.openai.com/)
 
 ### Data & APIs
-![Coresignal](https://img.shields.io/badge/Coresignal-1E40AF?style=for-the-badge&logo=linkedin&logoColor=white)
-![LinkedIn API](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)
+[![Coresignal](https://img.shields.io/badge/Coresignal-1E40AF?style=for-the-badge&logo=linkedin&logoColor=white)](https://coresignal.com/)
+[![LinkedIn API](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://developer.linkedin.com/)
 
 ### Deployment & Infrastructure
-![Render](https://img.shields.io/badge/Render-00ADD9?style=for-the-badge&logo=render&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+[![Render](https://img.shields.io/badge/Render-00ADD9?style=for-the-badge&logo=render&logoColor=white)](https://render.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
 
 </div>
 
