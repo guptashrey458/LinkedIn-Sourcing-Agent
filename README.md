@@ -19,7 +19,7 @@ React UI → API Call → FastAPI Backend → CrewAI Agents → Coresignal API �
 
 ### Frontend Application
 - **Local Development**: `http://localhost:5173/`
-- **Production**: [Deploy your frontend and add link here]
+- **Production**: https://linkedin-sourcing-pipeline-7deovywqo.vercel.app
 
 ### Backend API
 - **API Endpoint**: `https://linkedin-sourcing-agent.onrender.com`
@@ -153,4 +153,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-**Note**: Add your frontend deployment link above once you deploy the React app to Vercel, Netlify, or another platform. 
+**✅ Live Demo**: Your LinkedIn Sourcing Pipeline is now live at https://linkedin-sourcing-pipeline-7deovywqo.vercel.app 
