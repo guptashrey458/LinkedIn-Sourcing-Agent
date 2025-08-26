@@ -83,7 +83,7 @@ graph TB
 
 ### Frontend Application
 - **Local Development**: `http://localhost:5173/`
-- **Production**: https://linkedin-sourcing-pipeline-7deovywqo.vercel.app
+- **Production**: [https://linkedin-sourcing-pipeline-7deovywqo.vercel.app](https://linkedin-sourcing-pipeline.vercel.app/)
 
 ### Backend API
 - **API Endpoint**: `https://linkedin-sourcing-agent.onrender.com`
